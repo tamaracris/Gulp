@@ -8,7 +8,7 @@ const image = require('gulp-imagemin')
 function tarefasCSS(cb) {
 
 
-    return gulp.src('./vendor/**/*.css')
+    return gulp.src('./src/css/style.css')
     .pipe(concat('libs.css')) 
     .pipe(cssmin())
     .pipe(rename({ suffix: '.min'}))
@@ -19,7 +19,7 @@ function tarefasCSS(cb) {
 
 function tarefasJS(){          
     
-    return gulp.src('./vendor/**/*.js')       
+    return gulp.src('./src/js/custom.js')       
     .pipe(concat('libs.js'))  
     .pipe(uglify())
     .pipe(rename({ suffix: '.min'}))          
